@@ -435,7 +435,7 @@ li{
 }
 
 form {
-	width: 70%
+	width: 70%;
 	margin: 0 auto;
 }
 
@@ -453,7 +453,7 @@ textarea {
 	outline-color: #fd57bf;
 }
 
-input [type="submit"] {
+input[type="submit"] {
 	width: initial;
 	background-color: #fd57bf;
 	color: #eee;
@@ -463,7 +463,7 @@ input [type="submit"] {
 	transition: background-color 650ms;
 }
 
-input [type="submit"]:hover {
+input[type="submit"]:hover {
 	color: #221e3f;
 	background-color: #ffe838;
 }
