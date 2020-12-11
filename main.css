@@ -208,6 +208,10 @@ li{
 	z-index: 1;
 }
 
+.mylogo{
+	width: 50%;
+}
+
 .landing-text h1 {
 	font-size: 10rem;
 	font-family: 'Russo One', sans-serif;
