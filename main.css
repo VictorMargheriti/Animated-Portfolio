@@ -209,8 +209,8 @@ li{
 }
 
 .landing-text h1 {
-	font-size: 5rem;
-	font-family: 'Press Start 2P', cursive;
+	font-size: 15rem;
+	font-family: 'Russo One', sans-serif;
 	background: linear-gradient(to top, #ffe838, #fd57bf);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -257,6 +257,15 @@ li{
 	flex: 1;
 }
 
+.stack-title {
+	text-decoration: underline;
+}
+
+.stack {
+	font-size: 1.5rem;
+
+}
+
 .social-media {
 	margin-top: 5rem;
 }
@@ -266,8 +275,8 @@ li{
 	transition: color 650ms;
 }
 
-.fa-facebook-square:hover {
-	color: #4267b2;
+.fa-linkedin:hover {
+	color: #2867B2;
 }
 
 .fa-twitter-square:hover {
