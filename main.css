@@ -453,6 +453,7 @@ form label {
 }
 
 input,
+button,
 select,
 textarea {
 	width: 100%;
@@ -489,6 +490,37 @@ input[type="submit"]:hover {
 }
 
 input[type="reset"]:hover {
+	color: #221e3f;
+	background-color: #ffe838;
+}
+
+button[type="submit"] {
+	width: initial;
+	background-color: #fd57bf;
+	color: #eee;
+	padding: 1rem 2rem;
+	border-radius: .8rem;
+	cursor: pointer;
+	transition: background-color 650ms;
+}
+
+button[type="reset"] {
+	float: right;
+	width: initial;
+	background-color: #fd57bf;
+	color: #eee;
+	padding: 1rem 2rem;
+	border-radius: .8rem;
+	cursor: pointer;
+	transition: background-color 650ms;
+}
+
+button[type="submit"]:hover {
+	color: #221e3f;
+	background-color: #ffe838;
+}
+
+button[type="reset"]:hover {
 	color: #221e3f;
 	background-color: #ffe838;
 }

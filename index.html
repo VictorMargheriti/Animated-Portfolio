@@ -219,7 +219,7 @@
 				<h1>Contact</h1>
 				<h6>Let's work together</h6>
 			</div>
-			<form action="mail.php" method="POST" data-aos="flip-down" data-aos-delay="600">
+			<!-- <form action="mail.php" method="POST" data-aos="flip-down" data-aos-delay="600">
 				<label for="name">Name:</label>
 				<input type="text" id="name" name="name" placeholder="Enter your name..." required>
 				<label for="email">Email:</label>
@@ -234,7 +234,37 @@
 				<textarea name="message" id="message" cols="10" rows="10"></textarea>
 				<input type="submit" value="Send">
 				<input type="reset" value="Clear">
-			</form>
+			</form> -->
+
+			<form action="mail.php" method="post" data-aos="flip-down" data-aos-delay="600">
+				<div class="elem-group">
+				  <label for="name">Name:</label>
+				  <input type="text" id="name" name="visitor_name" placeholder="Enter your name..." pattern=[A-Z\sa-z]{3,20} required>
+				</div>
+				<div class="elem-group">
+				  <label for="email">E-mail:</label>
+				  <input type="email" id="email" name="visitor_email" placeholder="Enter your email..." required>
+				</div>
+				<div class="elem-group">
+				  <label for="department-selection">Services:</label>
+				  <select id="department-selection" name="concerned_department" required>
+					  <option value="">Select a Service...</option>
+					  <option value="billing">Web Development</option>
+					  <option value="marketing">E-commerce Management</option>
+					  <option value="technical support">Marketing Strategy</option>
+				  </select>
+				</div>
+				<div class="elem-group">
+					<label for="title">Message Title:</label>
+					<input type="text" id="title" name="email_title" required placeholder="We want to hire you for..." pattern=[A-Za-z0-9\s]{8,60}>
+				  </div>
+				<div class="elem-group">
+				  <label for="message">Message:</label>
+				  <textarea id="message" name="visitor_message" placeholder="Any additional details..." cols="10" rows="10"	required></textarea>
+				</div>
+				<button type="submit">Send</button>
+				<button type="reset">Clear</button>
+			  </form>
 		</div>
 	</section>
 	
