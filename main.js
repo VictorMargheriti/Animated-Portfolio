@@ -102,16 +102,16 @@ class Particle {
         let distance = Math.sqrt(dx*dx + dy*dy);
         if(distance < mouse.radius + this.size){
             if(mouse.x < this.x && this.x < canvas.width - this.size * 10){
-                this.x += 10;
+                this.x += 1;
             }
             if(mouse.x > this.x && this.x > this.size * 10){
-                this.x -+ 10;
+                this.x -+ 1;
             }
             if(mouse.y < this.y && this.y < canvas.height - this.size * 10){
-                this.y += 10;
+                this.y += 1;
             }
             if(mouse.y > this.y && this.y > this.size * 10){
-                this.y -= 10;
+                this.y -= 1;
             }
         }
         //move particle
