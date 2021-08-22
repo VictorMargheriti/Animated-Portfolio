@@ -37,7 +37,20 @@ const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-let particlesArray;
+let particlesArray = [];
+
+//random colours
+const colors = [
+    '#fff',
+    'rgba(255, 255, 255, 0.3)',
+    'rgba(173, 216, 230, 0.8)',
+    'rgba(232, 203, 46, 0.8)'
+]
+
+//random size
+const maxSize = 40;
+const minSize = 0;
+const mouseRadius = 60;
 
 //get mouse position
 let mouse = {
@@ -68,7 +81,8 @@ class Particle {
     draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, Math.PI * 2, false);
-        ctx.fillStyle = '#8C5523';
+        // ctx.fillStyle = '#8C5523';
+        ctx.fillStyle = colors[Math.floor(Math.random() * colors.length)];
         ctx.fill();
     }
     
@@ -118,7 +132,8 @@ function init() {
         let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
         let directionX = (Math.random() * 5) - 2.5;
         let directionY = (Math.random() * 5) - 2.5;
-        let color = '#8C5523'
+        let color = colors[Math.floor(Math.random() * colors.length)];
+        // let color = '#8C5523'
 
         particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
     }
@@ -172,6 +187,22 @@ function connect(){
         }
     }
 }
+
+//mouse interactivity
+// if (   mouse.x - this.x < mouseRadius
+//     && mouse.x - this.x > -mouseRadius
+//     && mouse.y - this.y < mouseRadius
+//     && mouse.y - this.y > -mouseRadius){
+//         if (this.size < maxSize){
+//             this.size += 3;
+//         } else if (this.size > minSize){
+//             this.size -= 0.1;
+//         }
+//         if (this.size < 0){
+//             this.size = 0;
+//         }
+//         this.draw();
+//     }
 
 init();
 animate();
