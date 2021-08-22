@@ -712,3 +712,18 @@ button[type="reset"]:hover {
     height: 100%;
     background: radial-gradient(#4432a8, #16162D);
 }
+
+/* CUSTOM SCROLLBAR */
+
+html::-webkit-scrollbar {
+	width: 15px;
+}
+
+html::-webkit-scrollbar-track {
+	background: linear-gradient(0deg, #ffe838 0%, #fd57bf 100%)
+}
+
+html::-webkit-scrollbar-thumb {
+	background: transparent;
+	box-shadow: 0px 0px 0px 100vh #16162D;
+}
